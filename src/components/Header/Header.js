@@ -7,22 +7,22 @@ import uploadIcon from '../../assets/icons/upload.svg'
 function Header () {
     const mediaQuery = window.matchMedia('(min-width: 768px)')
     return(
-        <header>
+        <header className="header">
             <div>
-                <img src={logo} alt="BrainFlix Logo"/>
+                <img src={logo} alt="BrainFlix Logo" className="header__logo"/>
             </div>
-            <div>
-                <form action="/action_page.php">
-                    <input type="text" placeholder="Search.." name="search"/>
+            <div className="header__form">
+                <form>
+                    <input type="text" placeholder="Search.." name="search" className="header__searchBar"/>
                 </form>
-                {!mediaQuery.matches?<img className="placeholder" src={userIcon} alt="mohanMuruge icon"/>:<></>}
+                {!mediaQuery.matches?<img className="header__userIcon" src={userIcon} alt="mohanMuruge icon"/>:<></>}
             </div>
             <div>
-                <button>
-                    <img src={uploadIcon} alt="uploadLogo"/>
-                    <span>UPLOAD</span>
+                <button className="header__button">
+                    <img src={uploadIcon} alt="uploadLogo" className="header__button-image"/>
+                    UPLOAD
                 </button>
-                {mediaQuery.matches?<img className="placeholder" src={userIcon} alt="mohanMuruge icon"/>:<></>}
+                {mediaQuery.matches?<img className="header__userIcon" src={userIcon} alt="mohanMuruge icon"/>:<></>}
             </div>
         </header>
     )
