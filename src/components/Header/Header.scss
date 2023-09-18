@@ -20,6 +20,15 @@
     &__logo {
         width: 50vw;
         height: 5vh;
+
+        @include tablet {
+            width: 20vw;
+            padding: 0rem 5rem 0rem 1rem;
+        }
+
+        @include desktop {
+            padding: 0rem 10rem 0rem 1rem;
+        }
     }
 
     &__searchBar {
@@ -31,6 +40,10 @@
         width: 70vw;
         border-radius: 5px;
         text-indent: 10%;
+
+        @include tablet {
+            width: 30vw;
+        }
     }
 
     &__form {
@@ -44,26 +57,46 @@
         width: 7vw;
         border-radius: 50%;
         background-size: auto, contain;
-        margin-left: 20px;
+        margin-left: 1rem;
+
+        @include tablet {
+            height: 6vh;
+        }
+
+        @include desktop {
+            margin-left: 2rem;
+        }
     }
 
     &__upload{
-
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+            padding-left: 0.5rem;
+        }
         &-button{
             background-color: $brainflixBlue;
             border: none;
             border-radius: 5px;
-            height: 8vh;
+            height: 6vh;
             width: 85vw;
             color: $brainflixWhite;
             font-weight: $fontWeightBold;
+            @include tablet {
+                height: 6vh;
+                width: 20vw;
+            }
         }
         
         &-image{
             z-index: 10;
             position: absolute;
-            top: 20%;
+            top: 18%;
             left: 10%;
+
+            @include tablet {
+                position: relative;
+            }
         }
     }
 }

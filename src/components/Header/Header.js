@@ -18,9 +18,9 @@ function Header () {
                 {!mediaQuery.matches?<img className="header__userIcon" src={userIcon} alt="mohanMuruge icon"/>:<></>}
             </div>
             <div className="header__upload">
-                {mediaQuery.matches?<img className="header__userIcon" src={userIcon} alt="mohanMuruge icon"/>:<></>}
                 <img src={uploadIcon} alt="Upload Logo" className="header__upload-image"/>
                 <button className="header__upload-button">UPLOAD</button>
+                {mediaQuery.matches?<img className="header__userIcon" src={userIcon} alt="mohanMuruge icon"/>:<></>}
             </div>
         </header>
     )
