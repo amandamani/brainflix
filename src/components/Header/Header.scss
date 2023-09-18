@@ -24,13 +24,13 @@
 
     &__searchBar {
         background-image: url("../../assets/icons/search.svg");
-        object-fit: cover;
+        object-fit: contain;
         background-repeat: no-repeat;
-        background-origin: padding-box;
+        background-position: 2%;
         height: 5vh;
         width: 70vw;
         border-radius: 5px;
-        text-indent: 12%;
+        text-indent: 10%;
     }
 
     &__form {
@@ -41,25 +41,29 @@
 
     &__userIcon {
         height: 5vh;
-        width: 5vh;
+        width: 7vw;
         border-radius: 50%;
-        object-fit: cover;
+        background-size: auto, contain;
         margin-left: 20px;
     }
 
-    &__button {
-        background-color: $brainflixBlue;
-        border: none;
-        border-radius: 5px;
-        height: 8vh;
-        width: 90vw;
-        padding: 0rem 6rem;
-        color: $brainflixWhite;
-        font-weight: $fontWeightBold;
+    &__upload{
 
+        &-button{
+            background-color: $brainflixBlue;
+            border: none;
+            border-radius: 5px;
+            height: 8vh;
+            width: 85vw;
+            color: $brainflixWhite;
+            font-weight: $fontWeightBold;
+        }
+        
         &-image{
-            position: relative;
-            right:100%;
+            z-index: 10;
+            position: absolute;
+            top: 20%;
+            left: 10%;
         }
     }
 }

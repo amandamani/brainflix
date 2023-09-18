@@ -13,16 +13,14 @@ function Header () {
             </div>
             <div className="header__form">
                 <form>
-                    <input type="text" placeholder="Search.." name="search" className="header__searchBar"/>
+                    <input type="text" placeholder="Search" name="search" className="header__searchBar"/>
                 </form>
                 {!mediaQuery.matches?<img className="header__userIcon" src={userIcon} alt="mohanMuruge icon"/>:<></>}
             </div>
-            <div>
-                <button className="header__button">
-                    <img src={uploadIcon} alt="uploadLogo" className="header__button-image"/>
-                    UPLOAD
-                </button>
+            <div className="header__upload">
                 {mediaQuery.matches?<img className="header__userIcon" src={userIcon} alt="mohanMuruge icon"/>:<></>}
+                <img src={uploadIcon} alt="Upload Logo" className="header__upload-image"/>
+                <button className="header__upload-button">UPLOAD</button>
             </div>
         </header>
     )
