@@ -4,11 +4,11 @@ import likeLogo from '../../assets/icons/likes.svg'
 
 
 function VideoInfo (props) {
-    // const mediaQuery = window.matchMedia('(min-width: 768px)')
+    const mediaQuery = window.matchMedia('(min-width: 768px)')
     return(
     <section>
         <h1 className="videoInfo__title">{props.videoTitle}</h1>
-        <hr></hr>
+        {mediaQuery.matches?<></>:<hr></hr>}
         <div className="videoInfo__stats">
             <div className="videoInfo__content">
                 <h4 className="videoInfo__creator">By {props.videoCreator}</h4>
