@@ -1,0 +1,32 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/colors" as *;
+
+*{
+    font-family: $fontRegular;
+}
+
+.videoInfo{
+    &__title{
+        color:$brainflixBlack;
+    }
+    &__stats{
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+    &__content{
+        display: flex;
+        flex-direction: column;
+    }
+    &__date, &__numbers{
+        color:$brainflixSilver;
+    }
+    &__date,&__creator{
+        margin: 0.75rem 0rem
+    }
+    &__numbers{
+        margin: 0.75rem 0.5rem
+    }
+
+}
