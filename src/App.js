@@ -1,6 +1,7 @@
 import './App.scss';
 import Header from './components/Header/Header'
 import Video from './components/Video/Video'
+import CommentSection from './components/CommentSection/CommentSection'
 
 function App() {
   return (
@@ -22,7 +23,9 @@ function App() {
         that was all that was needed for event veteran
         Kyle Strait, who won the event for the second
         time -- eight years after his first Red Cow
-        Rampage title"
+        Rampage title"/>
+      <CommentSection
+        numberOfComments = {3}
       />
     </div>
   );

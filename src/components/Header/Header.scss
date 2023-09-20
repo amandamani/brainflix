@@ -69,6 +69,7 @@
     }
 
     &__upload{
+        position: relative;
         @include tablet {
             display: flex;
             flex-direction: row;
@@ -91,11 +92,11 @@
         &-image{
             z-index: 10;
             position: absolute;
+            left: 2%;
             top: 20%;
-            left: 10%;
-
+            
             @include tablet {
-                position: relative;
+                left: 7%;
             }
         }
     }

@@ -1,0 +1,71 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/colors" as *;
+
+*{
+    font-family: $fontRegular;
+}
+
+.comment-section {
+
+    &__form{
+        display: flex;
+        flex-direction: row;
+        padding: 1rem 1rem;
+    }
+    
+    &__add {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__heading {
+        margin: 0rem 0rem 0.25rem;
+    }
+
+    &__input {
+        width: 70vw;
+        height: 20vh;
+        margin-bottom: 1rem;
+    }
+
+    &__userIcon {
+        height: 5vh;
+        width: 7vw;
+        border-radius: 50%;
+        background-size: auto, contain;
+        margin: 1rem 1rem 0rem 0rem;
+
+        @include tablet {
+            height: 6vh;
+        }
+
+        @include desktop {
+            margin-left: 2rem;
+        }
+    }
+
+    &__button{
+        background-color: $brainflixBlue;
+        border: none;
+        border-radius: 5px;
+        height: 7vh;
+        color: $brainflixWhite;
+        font-weight: $fontWeightBold;
+        @include tablet {
+            height: 6vh;
+            width: 20vw;
+        }
+    }
+        
+    &-image{
+        z-index: 10;
+        position: absolute;
+        top: 20%;
+        left: 10%;
+
+        @include tablet {
+            position: relative;
+        }
+    }
+}
