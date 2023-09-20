@@ -17,16 +17,28 @@
     &__add {
         display: flex;
         flex-direction: column;
+        position: relative;
     }
 
     &__heading {
         margin: 0rem 0rem 0.25rem;
+        color: $brainflixSilver;
     }
 
     &__input {
-        width: 70vw;
+        width: 75vw;
+        @include mobile500 {
+            width: 80vw;
+        }
         height: 20vh;
         margin-bottom: 1rem;
+        background-color:#FAFAFA;
+        border: 1.5px solid $brainflixSilver;
+        border-radius: 4px;
+        &::placeholder{
+            padding: 1rem 0rem 0rem 0.5rem;
+            color:black;
+        }
     }
 
     &__userIcon {
@@ -34,7 +46,7 @@
         width: 7vw;
         border-radius: 50%;
         background-size: auto, contain;
-        margin: 1rem 1rem 0rem 0rem;
+        margin: 1.25rem 1rem 0rem 0rem;
 
         @include tablet {
             height: 6vh;
@@ -58,11 +70,11 @@
         }
     }
         
-    &-image{
+    &__image{
         z-index: 10;
         position: absolute;
-        top: 20%;
-        left: 10%;
+        top: 85%;
+        left: 5%;
 
         @include tablet {
             position: relative;
