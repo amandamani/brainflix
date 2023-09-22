@@ -30,8 +30,8 @@
     }
 
     &__input {
-        width: 55vw;
-        height: 10vh;
+        width: 65vw;
+        height: 12vh;
         margin: 0rem 0.5rem 1rem 0rem;
         background-color:#FAFAFA;
         border: 1.5px solid $brainflixSilver;
@@ -41,8 +41,14 @@
             color:black;
         }
 
+        @include mobile400{
+            width: 70vw;
+            height: 15vh;
+        }
+
         @include mobile500 {
-            width: 80vw;
+            width: 78vw;
+            height: 15vh;
         }
 
         @include tablet {
@@ -74,6 +80,15 @@
         height: 5vh;
         color: $brainflixWhite;
         font-weight: $fontWeightBold;
+
+        @include mobile400{
+            height: 5.5vh;
+        }
+
+        @include mobile500{
+            height: 6vh;
+        }
+
         @include tablet {
             height: 4.2vh;
             width: 20vw;
@@ -84,7 +99,7 @@
     &__image{
         z-index: 10;
         position: absolute;
-        top: 82%;
+        top: 83%;
         left: 5%;
 
         @include tablet {

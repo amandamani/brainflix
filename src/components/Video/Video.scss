@@ -9,6 +9,15 @@
 .video {
     display: flex;
     width: 87vw;
+    @include mobile400{
+        width: 380px;
+    }
+    @include mobile500{
+        width: 380px;
+    }
+    @include tablet{
+        width: 380px;
+    }
     
     &__image{
         width: 150px;

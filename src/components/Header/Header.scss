@@ -37,9 +37,21 @@
         background-repeat: no-repeat;
         background-position: 2%;
         height: 5vh;
-        width: 58vw;
+        width: 66vw;
         border-radius: 5px;
         text-indent: 10%;
+
+        @include mobile400{
+            width: 70vw;
+        }
+
+        @include mobile500 {
+            width: 74vw;
+        }
+
+        @include mobile600 {
+            width: 76vw;
+        }
 
         @include tablet {
             width: 30vw;
@@ -94,7 +106,7 @@
             z-index: 10;
             position: absolute;
             left: 2%;
-            top: 32%;
+            top: 20%;
             
             @include tablet {
                 top: 30%;

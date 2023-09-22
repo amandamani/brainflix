@@ -12,4 +12,14 @@
         color: $brainflixSilver;
         width: 300px;
     }
+    @include mobile400{
+        width: 380px;
+    }
+    @include mobile500{
+        width: 380px;
+    }
+    @include tablet{
+        width: 380px;
+    }
+    
 }
