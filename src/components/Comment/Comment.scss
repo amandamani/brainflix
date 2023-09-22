@@ -21,10 +21,10 @@
     &__userdetails {
         display: flex;
         justify-content: space-between;
-        width: 70vw;
+        width: 65vw;
 
         @include mobile500{
-            width: 80vw;
+            width: 70vw;
         }
 
         @include tablet {

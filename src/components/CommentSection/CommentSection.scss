@@ -30,9 +30,8 @@
     }
 
     &__input {
-        width: 75vw;
-       
-        height: 20vh;
+        width: 55vw;
+        height: 10vh;
         margin: 0rem 0.5rem 1rem 0rem;
         background-color:#FAFAFA;
         border: 1.5px solid $brainflixSilver;
@@ -54,10 +53,10 @@
 
     &__userIcon {
         height: 5vh;
-        width: 7vw;
+        width: 5vh;
         border-radius: 50%;
-        background-size: auto, contain;
-        margin: 1.25rem 1rem 0rem 0rem;
+        object-fit: cover;
+        margin: 1rem 1rem 0rem 0rem;
 
         @include tablet {
             height: 4vh;
@@ -72,7 +71,7 @@
         background-color: $brainflixBlue;
         border: none;
         border-radius: 5px;
-        height: 7vh;
+        height: 5vh;
         color: $brainflixWhite;
         font-weight: $fontWeightBold;
         @include tablet {
@@ -85,7 +84,7 @@
     &__image{
         z-index: 10;
         position: absolute;
-        top: 85%;
+        top: 82%;
         left: 5%;
 
         @include tablet {

@@ -1,0 +1,11 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/colors" as *;
+
+*{
+    font-family: $fontRegular;
+}
+
+.brainFlix__video {
+    object-fit: cover;
+}

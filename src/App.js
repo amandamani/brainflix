@@ -1,13 +1,14 @@
 import './App.scss';
 import Header from './components/Header/Header'
-import Video from './components/Video/Video'
+import VideoMain from './components/VideoMain/VideoMain'
 import CommentSection from './components/CommentSection/CommentSection'
+import VideoList from './components/VideoList/VideoList';
 
 function App() {
   return (
     <div>
       <Header />
-      <Video
+      <VideoMain
         currentVideo = "https://i.imgur.com/l2Xfgpl.jpg"
         videoTitle = "BMX Rampage: 2021 Highlights"
         videoCreator = "Ray Crow"
@@ -25,6 +26,7 @@ function App() {
         time -- eight years after his first Red Cow
         Rampage title"/>
       <CommentSection />
+      <VideoList />
     </div>
   );
 }

@@ -37,7 +37,7 @@
         background-repeat: no-repeat;
         background-position: 2%;
         height: 5vh;
-        width: 70vw;
+        width: 58vw;
         border-radius: 5px;
         text-indent: 10%;
 
@@ -54,10 +54,11 @@
 
     &__userIcon {
         height: 5vh;
-        width: 7vw;
+        width: 5vh;
         border-radius: 50%;
-        background-size: auto, contain;
+        background-size: cover;
         margin-left: 1rem;
+        
 
         @include tablet {
             height: 6vh;
@@ -93,7 +94,7 @@
             z-index: 10;
             position: absolute;
             left: 2%;
-            top: 25%;
+            top: 32%;
             
             @include tablet {
                 top: 30%;

@@ -1,0 +1,15 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/colors" as *;
+
+*{
+    font-family: $fontRegular;
+}
+
+.video-list {
+    // margin-left: 0.75rem;
+    &__title{
+        color: $brainflixSilver;
+        width: 300px;
+    }
+}

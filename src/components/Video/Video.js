@@ -1,26 +1,16 @@
 import './Video.scss'
-import VideoInfo from '../VideoInfo/VideoInfo'
-
-
 
 function Video (props) {
     return(
-    <>
-        <video 
-        poster={props.currentVideo} 
-        width="100%" height="40%" controls 
-        className="brainflix__video">
-        </video>
-        <VideoInfo  
-            videoTitle = {props.videoTitle}
-            videoCreator = {props.videoCreator}
-            videoDate = {props.videoDate}
-            videoViews =  {props.videoViews}
-            videoLikes =  {props.videoLikes}
-            videoDesc =  {props.videoDesc}
-        />
-        {/* <VideoComment /> */}
-    </>
+    <div className="video">
+        <div>
+            <img src={props.image} alt={props.title} className="video__image"/>
+        </div>
+        <div className="video__content">
+            <h5 className="video__title">{props.title}</h5>
+            <p className="video__channel">{props.channel}</p>
+        </div>
+    </div>
     )
 }
 
