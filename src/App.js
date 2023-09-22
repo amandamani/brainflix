@@ -24,9 +24,7 @@ function App() {
         Kyle Strait, who won the event for the second
         time -- eight years after his first Red Cow
         Rampage title"/>
-      <CommentSection
-        numberOfComments = {3}
-      />
+      <CommentSection />
     </div>
   );
 }

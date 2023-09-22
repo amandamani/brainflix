@@ -84,7 +84,7 @@
             color: $brainflixWhite;
             font-weight: $fontWeightBold;
             @include tablet {
-                height: 6vh;
+                height: 5.75vh;
                 width: 20vw;
             }
         }
@@ -93,9 +93,10 @@
             z-index: 10;
             position: absolute;
             left: 2%;
-            top: 20%;
+            top: 25%;
             
             @include tablet {
+                top: 30%;
                 left: 7%;
             }
         }

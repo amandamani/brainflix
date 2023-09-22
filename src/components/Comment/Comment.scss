@@ -1,0 +1,51 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/colors" as *;
+
+*{
+    font-family: $fontRegular;
+}
+
+.new-comment {
+
+    display: flex;
+
+    &__userIcon {
+        height: 5vh;
+        width: 5vh;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 1rem 1rem 0rem 0rem;
+    }
+
+    &__userdetails {
+        display: flex;
+        justify-content: space-between;
+        width: 70vw;
+
+        @include mobile500{
+            width: 80vw;
+        }
+
+        @include tablet {
+            width: 85vw;
+        }
+        
+        @include desktop {
+            width: 90vw;
+        }
+    }
+
+    &__sub-heading {
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+        color: $brainflixBlack;
+    }
+
+    &__date {
+        color: $brainflixSilver;
+        font-weight: 100;
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+    }
+}

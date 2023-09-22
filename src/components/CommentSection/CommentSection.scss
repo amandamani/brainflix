@@ -7,11 +7,15 @@
 }
 
 .comment-section {
+    &__title {
+        color: $brainflixBlack;
+    }
 
     &__form{
         display: flex;
         flex-direction: row;
         padding: 1rem 1rem;
+        position: relative;
     }
     
     &__add {
@@ -27,17 +31,24 @@
 
     &__input {
         width: 75vw;
-        @include mobile500 {
-            width: 80vw;
-        }
+       
         height: 20vh;
-        margin-bottom: 1rem;
+        margin: 0rem 0.5rem 1rem 0rem;
         background-color:#FAFAFA;
         border: 1.5px solid $brainflixSilver;
         border-radius: 4px;
         &::placeholder{
             padding: 1rem 0rem 0rem 0.5rem;
             color:black;
+        }
+
+        @include mobile500 {
+            width: 80vw;
+        }
+
+        @include tablet {
+            height: 4vh;
+            width: 60vw;
         }
     }
 
@@ -49,7 +60,7 @@
         margin: 1.25rem 1rem 0rem 0rem;
 
         @include tablet {
-            height: 6vh;
+            height: 4vh;
         }
 
         @include desktop {
@@ -65,8 +76,9 @@
         color: $brainflixWhite;
         font-weight: $fontWeightBold;
         @include tablet {
-            height: 6vh;
+            height: 4.2vh;
             width: 20vw;
+            margin-top: 1.25rem;
         }
     }
         
@@ -77,7 +89,16 @@
         left: 5%;
 
         @include tablet {
-            position: relative;
+            top: 40%;
+            left: 77%;
+        }
+        
+        @include tablet1000{
+            left:75%
+        }
+        
+        @include desktop1450 {
+            left: 74%;
         }
     }
 }
