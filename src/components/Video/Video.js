@@ -1,8 +1,11 @@
 import './Video.scss'
 
 function Video (props) {
+    const clickHandler = () => {
+        props.changeActiveVideo(props.id)
+    }
     return(
-    <div className="video">
+    <div className="video" onClick={clickHandler}>
         <div>
             <img src={props.image} alt={props.title} className="video__image"/>
         </div>
