@@ -39,6 +39,9 @@
         &::placeholder{
             padding: 1rem 0rem 0rem 0.5rem;
             color:black;
+            @include tablet{
+                padding-top: 0.5rem;
+            }
         }
 
         @include mobile400{
@@ -54,6 +57,19 @@
         @include tablet {
             height: 4vh;
             width: 60vw;
+            margin-right: 1rem;
+        }
+
+        @include tablet900 {
+            width: 63vw;
+        }
+
+        @include tablet1200 {
+            width: 66vw;
+        }
+
+        @include desktop {
+            width: 29vw;
         }
     }
 
@@ -63,10 +79,6 @@
         border-radius: 50%;
         object-fit: cover;
         margin: 1rem 1rem 0rem 0rem;
-
-        @include tablet {
-            height: 4vh;
-        }
 
         @include desktop {
             margin-left: 2rem;
@@ -90,9 +102,13 @@
         }
 
         @include tablet {
-            height: 4.2vh;
-            width: 20vw;
+            height: 4.5vh;
+            width: 22vw;
             margin-top: 1.25rem;
+        }
+
+        @include tablet900 {
+            width: 24vw;
         }
     }
         
@@ -104,11 +120,11 @@
 
         @include tablet {
             top: 40%;
-            left: 77%;
+            left: 76.5%;
         }
-        
-        @include tablet1000{
-            left:75%
+
+        @include tablet900 {
+            left: 78%;
         }
         
         @include desktop1450 {

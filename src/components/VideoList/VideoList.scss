@@ -21,5 +21,8 @@
     @include tablet{
         width: 380px;
     }
+    @include desktop {
+        padding-left: 1rem;
+    }
     
 }

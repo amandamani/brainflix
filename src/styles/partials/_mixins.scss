@@ -2,7 +2,9 @@ $mobile400breakpoint: 400px;
 $mobile500breakpoint: 500px;
 $mobile600breakpoint: 600px;
 $tabletbreakpoint: 768px;
+$tablet900breakpoint: 900px;
 $tablet1000breakpoint: 1000px;
+$tablet1200breakpoint: 1200px;
 $desktopbreakpoint: 1279px;
 $desktop1450breakpoint: 1450px;
 
@@ -30,8 +32,20 @@ $desktop1450breakpoint: 1450px;
     }
 }
 
+@mixin tablet900 {
+    @media (min-width: $tablet900breakpoint) {
+        @content;
+    }
+}
+
 @mixin tablet1000 {
     @media (min-width: $tablet1000breakpoint) {
+        @content;
+    }
+}
+
+@mixin tablet1200 {
+    @media (min-width: $tablet1200breakpoint) {
         @content;
     }
 }

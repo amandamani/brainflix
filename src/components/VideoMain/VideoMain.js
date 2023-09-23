@@ -8,7 +8,9 @@ function VideoMain (props) {
     <>
         <video 
         poster={props.currentVideo.image} 
-        width="100%" height="40%" controls 
+        controls
+        width="100%"
+        height="40%"
         className="brainflix__video">
         </video>
     </>
