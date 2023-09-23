@@ -1,7 +1,6 @@
-body {
-    margin: 1rem;
-    font-family: 'Arial', sans-serif;
-}
+@use "./styles/partials/mixins" as *;
+@use "./styles/partials/fonts" as *;
+@use "./styles/partials/colors" as *;
 
 a {
     padding: 0.625rem;
@@ -11,5 +10,28 @@ a {
 
     &:hover {
         color: #545454;
+    }
+}
+
+.app{
+    &__content{
+        margin: 1rem;
+        display: flex;
+        flex-direction: column;
+        @include desktop{
+            flex-direction: row;
+            margin-top: 0rem;
+        }
+    }
+    &__divider{
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+        width: 200%;
+        margin: -50px 0px;
+    }
+    &__videoDetails{
+        @include desktop{
+            width:50vw;
+        }
     }
 }

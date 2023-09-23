@@ -10,7 +10,7 @@ function Video (props) {
             <img src={props.image} alt={props.title} className="video__image"/>
         </div>
         <div className="video__content">
-            <h5 className="video__title">{props.title}</h5>
+            <h4 className="video__title">{props.title}</h4>
             <p className="video__channel">{props.channel}</p>
         </div>
     </div>

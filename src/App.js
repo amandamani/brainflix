@@ -1,6 +1,7 @@
 import './App.scss';
 import Header from './components/Header/Header'
 import VideoMain from './components/VideoMain/VideoMain'
+import VideoInfo from './components/VideoInfo/VideoInfo';
 import CommentSection from './components/CommentSection/CommentSection'
 import VideoList from './components/VideoList/VideoList';
 import {useState} from 'react';
@@ -45,7 +46,7 @@ function App() {
 
   let currentVideo = (videoDetails.filter(video => video.id === activeVideo))[0];
 
-
+  const mediaQuery = window.matchMedia('(min-width: 1280px)')
   return (
     <div>
       <Header 
@@ -53,15 +54,26 @@ function App() {
       <VideoMain
         currentVideo = {currentVideo}
         dynamicTimeString = {dynamicTimeString}
-        />
-      <CommentSection 
-        comments = {currentVideo.comments}
-        dynamicTimeString = {dynamicTimeString}
       />
-      <VideoList 
-        activeVideo = {activeVideo}
-        changeActiveVideo = {changeActiveVideo}
-      />
+      <div className = "app__content">
+        <div className="app__videoDetails">
+          <VideoInfo  
+            currentVideo = {currentVideo}
+            dynamicTimeString = {dynamicTimeString}
+          />
+          <CommentSection 
+            comments = {currentVideo.comments}
+            dynamicTimeString = {dynamicTimeString}
+          />
+        </div>
+        {mediaQuery.matches?<hr className="app__divider"/>:<></>}
+        <div>
+          <VideoList 
+            activeVideo = {activeVideo}
+            changeActiveVideo = {changeActiveVideo}
+          />
+        </div>
+      </div>
     </div>
   );
 }
