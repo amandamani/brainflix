@@ -14,7 +14,7 @@ function VideoMain (props) {
         <VideoInfo  
             videoTitle = {props.currentVideo.title}
             videoCreator = {props.currentVideo.channel}
-            videoDate = {new Intl.DateTimeFormat('en-US', {day: "2-digit", month: "2-digit", year:"numeric"}).format(props.currentVideo.timestamp)}
+            videoDate = {props.dynamicTimeString(props.currentVideo.timestamp)}
             videoViews =  {props.currentVideo.views}
             videoLikes =  {props.currentVideo.likes}
             videoDesc =  {props.currentVideo.description}
