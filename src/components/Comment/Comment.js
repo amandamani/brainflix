@@ -3,6 +3,7 @@ import userIcon from '../../assets/images/greyBackground.jpg'
 
 
 function Comment (props) {
+    const mediaQuery = window.matchMedia('(min-width: 1280px)')
     return(
         <>
             <div class="new-comment">
@@ -19,7 +20,7 @@ function Comment (props) {
                     </div>
                 </div>
             </div>
-            <hr />
+            {mediaQuery.matches && (props.index === props.number)?<></>:<hr />}
         </>
     )
 }

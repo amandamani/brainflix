@@ -2,20 +2,10 @@
 @use "../../styles/partials/fonts" as *;
 @use "../../styles/partials/colors" as *;
 
-*{
-    font-family: $fontRegular;
-}
-
 .video {
     display: flex;
     width: 87vw;
     @include mobile400{
-        width: 380px;
-    }
-    @include mobile500{
-        width: 380px;
-    }
-    @include tablet{
         width: 380px;
     }
     
@@ -25,6 +15,10 @@
         border-radius: 5px;
         margin: 0rem 1.5rem 1.5rem 0rem;
         object-fit: cover; 
+        @include desktop{
+            width: 120px;
+            height: 80px;
+        }
     }
 
     &__title{

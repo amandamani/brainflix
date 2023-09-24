@@ -2,10 +2,6 @@
 @use "../../styles/partials/fonts" as *;
 @use "../../styles/partials/colors" as *;
 
-*{
-    font-family: $fontRegular;
-}
-
 .comment-section {
     &__title {
         color: $brainflixBlack;
@@ -16,6 +12,10 @@
         flex-direction: row;
         padding: 1rem 1rem;
         position: relative;
+
+        @include desktop {
+            padding: 1rem 0rem;
+        }
     }
     
     &__add {
@@ -69,7 +69,7 @@
         }
 
         @include desktop {
-            width: 29vw;
+            width: 30vw;
         }
     }
 
@@ -80,9 +80,7 @@
         object-fit: cover;
         margin: 1rem 1rem 0rem 0rem;
 
-        @include desktop {
-            margin-left: 2rem;
-        }
+
     }
 
     &__button{
@@ -110,6 +108,11 @@
         @include tablet900 {
             width: 24vw;
         }
+
+        @include desktop {
+            width: 15vw;
+        }
+        
     }
         
     &__image{
@@ -127,8 +130,8 @@
             left: 78%;
         }
         
-        @include desktop1450 {
-            left: 74%;
+        @include desktop {
+            left: 72%;
         }
     }
 }

@@ -2,10 +2,6 @@
 @use "../../styles/partials/fonts" as *;
 @use "../../styles/partials/colors" as *;
 
-*{
-    font-family: $fontRegular;
-}
-
 .header {
     display: flex;
     flex-direction: column;
@@ -15,6 +11,9 @@
     z-index: 10;
     @include tablet {
         flex-direction: row;
+    }
+    @include desktop {
+        padding: 0rem 1rem;
     }
   
     &__logo {
@@ -27,7 +26,7 @@
         }
 
         @include desktop {
-            padding: 0rem 10rem 0rem 1rem;
+            padding: 0rem 16rem 0rem 6rem;
         }
     }
 
@@ -67,7 +66,7 @@
         }
 
         @include desktop {
-            width: 33vw;
+            width: 20vw;
         }
     }
 
@@ -112,6 +111,9 @@
             @include tablet {
                 height: 5.75vh;
                 width: 23vw;
+            }
+            @include desktop {
+                width: 15vw;
             }
         }
         

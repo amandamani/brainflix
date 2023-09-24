@@ -27,13 +27,15 @@ function CommentSection (props) {
             </div>
             <hr />
             {
-                comments.map( comment => {
+                comments.map( (comment, index) => {
                     return(
                     <Comment
                         key = {comment.id}
                         userName = {comment.name}
                         date = {props.dynamicTimeString(comment.timestamp)}
                         comment = {comment.comment}
+                        index = {index}
+                        number = {comments.length - 1}
                     />
                 )})
             }

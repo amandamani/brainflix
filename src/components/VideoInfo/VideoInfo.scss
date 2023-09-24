@@ -2,13 +2,12 @@
 @use "../../styles/partials/fonts" as *;
 @use "../../styles/partials/colors" as *;
 
-*{
-    font-family: $fontRegular;
-}
-
 .videoInfo{
     &__title{
         color:$brainflixBlack;
+        @include tablet {
+            font-size: 2rem;
+        }
     }
     &__stats{
         display: flex;
@@ -35,6 +34,11 @@
         margin: 0.75rem 0.75rem;
         @include tablet {
             margin: 0rem 0.75rem 0.75rem;;
+        }
+    }
+    &__desc{
+        @include desktop {
+            margin-bottom: 5rem;
         }
     }
 

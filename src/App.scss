@@ -2,6 +2,10 @@
 @use "./styles/partials/fonts" as *;
 @use "./styles/partials/colors" as *;
 
+*{
+    font-family: $fontRegular;
+}
+
 a {
     padding: 0.625rem;
     text-decoration: none;
@@ -28,7 +32,8 @@ a {
     }
     &__videoDetails{
         @include desktop{
-            width:70vw;
+            width:52vw;
+            padding-left: 8rem;;
         }
     }
 }
