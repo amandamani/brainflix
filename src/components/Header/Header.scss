@@ -12,7 +12,7 @@
     @include tablet {
         flex-direction: row;
     }
-    @include desktop {
+    @include tablet {
         padding: 0rem 1rem;
     }
   
