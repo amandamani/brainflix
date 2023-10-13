@@ -5,7 +5,7 @@ function Upload () {
     return(
     <div className="upload">
         <Header />
-        <UploadForm />
+        <UploadForm/>
     </div>
     )
 }

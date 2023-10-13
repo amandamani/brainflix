@@ -3,11 +3,44 @@
 @use "../../styles/partials/colors" as *;
 
 .uploadForm{
+    margin: 0rem 1rem;
     &__topHR{
         margin: 0px -50px;
     }
     &__heading{
         margin: 2rem 0rem;
+    }
+
+    &__subHeading {
+        color: $brainflixSilver;
+        margin: 0.5rem 0rem;
+    }
+
+    &__thumbnail{
+        width: 90vw;
+        height: 40vh; 
+        border-radius: 5px;
+        object-fit:fill; 
+    }
+
+    &__input {
+        width: 90vw;
+        height: 6vh;
+        margin: 0rem 0.5rem 1rem 0rem;
+        background-color:#FAFAFA;
+        border: 1.5px solid $brainflixSilver;
+        border-radius: 4px;
+        &::placeholder{
+            padding: 1rem 0rem 0rem 0.5rem;
+            color:black;
+            @include tablet{
+                padding-top: 0.5rem;
+            }
+        }
+    }
+
+    &__desc {
+        height: 15vh;
     }
 
     &__publish{
@@ -21,8 +54,8 @@
             background-color: $brainflixBlue;
             border: none;
             border-radius: 5px;
-            height: 6vh;
-            width: 85vw;
+            height: 8vh;
+            width: 92vw;
             color: $brainflixWhite;
             font-weight: $fontWeightBold;
             @include tablet {
@@ -37,13 +70,18 @@
         &-image{
             z-index: 10;
             position: absolute;
-            left: 2%;
-            top: 20%;
+            left: 7%;
+            top: 13%;
             
             @include tablet {
                 top: 25%;
                 left: 7%;
             }
+        }
+
+        &-cancel{
+            color: $brainflixBlue;
+            text-align: center;
         }
     }
 }
