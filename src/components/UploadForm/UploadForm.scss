@@ -6,6 +6,9 @@
     margin: 0rem 1rem;
     &__topHR{
         margin: 0px -50px;
+        @include tablet{
+            margin: 0rem;
+        }
     }
     &__heading{
         margin: 2rem 0rem;
@@ -20,7 +23,11 @@
         width: 90vw;
         height: 40vh; 
         border-radius: 5px;
-        object-fit:fill; 
+        object-fit:fill;
+
+        @include tablet{
+            width: 50vw;
+        }
     }
 
     &__input {
@@ -37,6 +44,9 @@
                 padding-top: 0.5rem;
             }
         }
+        @include tablet {
+            width: 95vw;
+        }
     }
 
     &__desc {
@@ -47,8 +57,8 @@
         position: relative;
         @include tablet {
             display: flex;
-            flex-direction: row;
-            padding-left: 0.5rem;
+            flex-direction: row-reverse;
+            align-items: center;
         }
         &-button{
             background-color: $brainflixBlue;
@@ -59,7 +69,7 @@
             color: $brainflixWhite;
             font-weight: $fontWeightBold;
             @include tablet {
-                height: 5.75vh;
+                height: 8vh;
                 width: 23vw;
             }
             @include desktop {
@@ -74,14 +84,17 @@
             top: 13%;
             
             @include tablet {
-                top: 25%;
-                left: 7%;
+                top: 27%;
+                left: 78%;
             }
         }
 
         &-cancel{
             color: $brainflixBlue;
             text-align: center;
+            @include tablet{
+                padding-right: 5rem;
+            }
         }
     }
 }
