@@ -1,0 +1,49 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/colors" as *;
+
+.uploadForm{
+    &__topHR{
+        margin: 0px -50px;
+    }
+    &__heading{
+        margin: 2rem 0rem;
+    }
+
+    &__publish{
+        position: relative;
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+            padding-left: 0.5rem;
+        }
+        &-button{
+            background-color: $brainflixBlue;
+            border: none;
+            border-radius: 5px;
+            height: 6vh;
+            width: 85vw;
+            color: $brainflixWhite;
+            font-weight: $fontWeightBold;
+            @include tablet {
+                height: 5.75vh;
+                width: 23vw;
+            }
+            @include desktop {
+                width: 15vw;
+            }
+        }
+        
+        &-image{
+            z-index: 10;
+            position: absolute;
+            left: 2%;
+            top: 20%;
+            
+            @include tablet {
+                top: 25%;
+                left: 7%;
+            }
+        }
+    }
+}
