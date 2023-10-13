@@ -28,6 +28,11 @@
         @include tablet{
             width: 50vw;
         }
+
+        @include desktop {
+            width:45vw;
+            margin-right: 2rem;
+        }
     }
 
     &__input {
@@ -44,13 +49,35 @@
                 padding-top: 0.5rem;
             }
         }
+
         @include tablet {
             width: 95vw;
         }
+
+        @include desktop {
+            width: 50vw;
+        }
+
     }
 
     &__desc {
         height: 15vh;
+        @include desktop {
+            height: 22vh;
+        }
+    }
+
+    &__desktopDisplay{
+        display: none;
+        @include desktop {
+            display: block;
+        }
+    }
+
+    &__videoDetails{
+        @include desktop {
+            display:flex;
+        }
     }
 
     &__publish{
@@ -86,6 +113,11 @@
             @include tablet {
                 top: 27%;
                 left: 78%;
+            }
+
+            @include desktop {
+                left: 86%;
+                top: 28%;
             }
         }
 
