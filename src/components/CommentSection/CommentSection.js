@@ -6,7 +6,7 @@ import Comment from '../Comment/Comment'
 
 function CommentSection (props) {
     const mediaQuery = window.matchMedia('(min-width: 768px)')
-    const comments = props.comments;
+    const comments = props.currentVideo.comments;
     return(
         <section className="comment-section">
             <h4 className="comment-section__title">{comments.length} Comments</h4>

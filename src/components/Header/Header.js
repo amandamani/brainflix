@@ -2,6 +2,7 @@ import './Header.scss'
 import logo from '../../assets/logo/BrainFlix-logo.svg'
 import userIcon from '../../assets/images/Mohan-muruge.jpg'
 import uploadIcon from '../../assets/icons/upload.svg'
+import {NavLink} from 'react-router-dom';
 
 
 function Header () {
@@ -9,7 +10,7 @@ function Header () {
     return(
         <header className="header">
             <div>
-                <img src={logo} alt="BrainFlix Logo" className="header__logo"/>
+                <NavLink to="/"><img src={logo} alt="BrainFlix Logo" className="header__logo"/></NavLink>
             </div>
             <div className="header__form">
                 <form>
@@ -18,7 +19,7 @@ function Header () {
                 {!mediaQuery.matches?<img className="header__userIcon" src={userIcon} alt="mohanMuruge icon"/>:<></>}
             </div>
             <div className="header__upload">
-                <button className="header__upload-button"><img src={uploadIcon} alt="Upload Logo" className="header__upload-image"/>UPLOAD</button>
+            <NavLink to="/upload"><button className="header__upload-button"><img src={uploadIcon} alt="Upload Logo" className="header__upload-image"/>UPLOAD</button></NavLink>
                 {mediaQuery.matches?<img className="header__userIcon" src={userIcon} alt="mohanMuruge icon"/>:<></>}
             </div>
         </header>

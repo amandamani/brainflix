@@ -4,8 +4,11 @@ import VideoMain from '../../components/VideoMain/VideoMain'
 import VideoInfo from '../../components/VideoInfo/VideoInfo';
 import CommentSection from '../../components/CommentSection/CommentSection'
 import VideoList from '../../components/VideoList/VideoList';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import videoDetails from '../../data/video-details.json';
+import {useParams} from 'react-router-dom';
+import axios from 'axios';
+
 
 function Home () {  
   let currentTime = new Date();
@@ -38,20 +41,48 @@ function Home () {
     }
   };
 
-  const [activeVideo, setActiveVideo] = useState(videoDetails[0].id);
+  let apiKey = "23342553-3fcb-43e9-86f4-9034c97d1bb3"
+
+  const {videoid} = useParams();
+
+  const [allVideos, setAllVideos] = useState([]);
+  const [currentVideo, setCurrentVideo] = useState({});
+  const [activeVideo, setActiveVideo] = useState(null);
 
   const changeActiveVideo = (videoId) => {
-      setActiveVideo(videoId)
-  }
+    setActiveVideo(videoId)
+}
 
-  let currentVideo = (videoDetails.filter(video => video.id === activeVideo))[0];
+
+  useEffect (() => {
+    if (videoid){
+      axios.get(`https://project-2-api.herokuapp.com/videos/${videoid}?api_key=${apiKey}`)
+      .then((res) => {
+        setCurrentVideo(res.data)
+        console.log(currentVideo)
+      })
+      changeActiveVideo(videoid)
+    }
+    else {
+      axios.get(`https://project-2-api.herokuapp.com/videos/84e96018-4022-434e-80bf-000ce4cd12b8?api_key=${apiKey}`)
+      .then((res) => {
+        setCurrentVideo(res.data)
+        console.log(res.data)
+        changeActiveVideo(res.data.id)
+      });
+    }
+ },[videoid]);
 
   const mediaQuery = window.matchMedia('(min-width: 1280px)');
+  if (!currentVideo){
+    console.log("loading")
+  }
+  // else{
   return(
     <div>
       <Header 
       />
-      <VideoMain
+      {/* <VideoMain
         currentVideo = {currentVideo}
         dynamicTimeString = {dynamicTimeString}
       />
@@ -61,21 +92,23 @@ function Home () {
             currentVideo = {currentVideo}
             dynamicTimeString = {dynamicTimeString}
           />
-          <CommentSection 
-            comments = {currentVideo.comments}
+          {currentVideo.comments && <CommentSection 
+            currentVideo = {currentVideo}
             dynamicTimeString = {dynamicTimeString}
-          />
+          />}
         </div>
         {mediaQuery.matches?<hr className="home__divider"/>:<></>}
         <div>
           <VideoList 
             activeVideo = {activeVideo}
-            changeActiveVideo = {changeActiveVideo}
+            allVideos = {allVideos}
           />
         </div>
-      </div>
+      </div> */}
     </div>
   )
+  // }
 }
+
 
 export default Home

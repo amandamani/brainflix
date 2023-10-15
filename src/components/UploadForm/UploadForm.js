@@ -4,7 +4,7 @@ import publishIcon from '../../assets/icons/publish.svg';
 
 function UploadForm () {
     return (
-        <section className="uploadFrom">
+        <section className="uploadForm">
             <hr className="uploadForm__topHR"/>
             <h1 className="uploadForm__heading">Upload Video</h1>
             <form>

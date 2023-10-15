@@ -3,7 +3,7 @@
 @use "../../styles/partials/colors" as *;
 
 .uploadForm{
-    margin: 0rem 1rem;
+    padding: 0rem 1rem;
     &__topHR{
         margin: 0px -50px;
         @include tablet{

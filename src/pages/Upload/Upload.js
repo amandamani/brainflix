@@ -3,7 +3,7 @@ import Header from '../../components/Header/Header'
 import UploadForm from '../../components/UploadForm/UploadForm'
 function Upload () {
     return(
-    <div className="upload">
+    <div>
         <Header />
         <UploadForm/>
     </div>
