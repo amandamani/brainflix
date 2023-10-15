@@ -13,16 +13,16 @@
         flex-direction: row;
     }
     @include tablet {
-        padding: 0rem 1rem;
+        padding: 0rem 0rem;
     }
   
     &__logo {
-        width: 50vw;
+        width: 20vw;
         height: 5vh;
 
         @include tablet {
             width: 20vw;
-            padding: 0rem 5rem 0rem 1rem;
+            padding: 0rem 3rem 0rem 3rem;
         }
 
         @include desktop {
@@ -53,12 +53,12 @@
         }
 
         @include tablet {
-            width: 30vw;
+            width: 25vw;
             margin-right: 0.5rem;
         }
 
         @include tablet900 {
-            width: 35vw;
+            width: 25vw;
         }
 
         @include tablet1200 {
@@ -86,6 +86,7 @@
 
         @include tablet {
             height: 6vh;
+            margin-top: 0.5rem;
         }
 
         @include desktop {
@@ -120,12 +121,12 @@
         &-image{
             z-index: 10;
             position: absolute;
-            left: 2%;
+            left: 7%;
             top: 20%;
             
             @include tablet {
-                top: 25%;
-                left: 7%;
+                top: 28%;
+                left: 12%;
             }
         }
     }

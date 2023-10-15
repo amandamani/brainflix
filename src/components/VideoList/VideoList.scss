@@ -16,6 +16,7 @@
     }
     @include tablet{
         width: 380px;
+        padding-left: 2rem;
     }
     @include desktop {
         padding-left: 1rem;

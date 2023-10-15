@@ -32,15 +32,7 @@
         }
 
         @include tablet {
-            width: 85vw;
-        }
-
-        @include tablet900 {
-            width: 89vw;
-        }
-
-        @include tablet1200 {
-            width: 92vw;
+            width: 80vw;
         }
         
         @include desktop {

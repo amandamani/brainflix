@@ -5,7 +5,6 @@ import VideoInfo from '../../components/VideoInfo/VideoInfo';
 import CommentSection from '../../components/CommentSection/CommentSection'
 import VideoList from '../../components/VideoList/VideoList';
 import {useState, useEffect} from 'react';
-import videoDetails from '../../data/video-details.json';
 import {useParams} from 'react-router-dom';
 import axios from 'axios';
 
@@ -53,13 +52,18 @@ function Home () {
     setActiveVideo(videoId)
 }
 
+  useEffect (() => {
+    axios.get(`https://project-2-api.herokuapp.com/videos?api_key=${apiKey}`)
+    .then((res) =>{
+      setAllVideos(res.data)
+    })
+  },[]);
 
   useEffect (() => {
     if (videoid){
       axios.get(`https://project-2-api.herokuapp.com/videos/${videoid}?api_key=${apiKey}`)
       .then((res) => {
         setCurrentVideo(res.data)
-        console.log(currentVideo)
       })
       changeActiveVideo(videoid)
     }
@@ -74,15 +78,11 @@ function Home () {
  },[videoid]);
 
   const mediaQuery = window.matchMedia('(min-width: 1280px)');
-  if (!currentVideo){
-    console.log("loading")
-  }
-  // else{
   return(
     <div>
       <Header 
       />
-      {/* <VideoMain
+      <VideoMain
         currentVideo = {currentVideo}
         dynamicTimeString = {dynamicTimeString}
       />
@@ -104,10 +104,9 @@ function Home () {
             allVideos = {allVideos}
           />
         </div>
-      </div> */}
+      </div>
     </div>
   )
-  // }
 }
 
 

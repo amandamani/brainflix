@@ -4,10 +4,20 @@
 
 .uploadForm{
     padding: 0rem 1rem;
+
+    @include tablet {
+        width: 92vw;
+        padding-left: 2rem;
+    }
+    @include desktop{
+        width: 80vw;
+        padding-left: 9.5rem;
+    }
+
     &__topHR{
         margin: 0px -50px;
         @include tablet{
-            margin: 0rem;
+            margin: 0px -250px;
         }
     }
     &__heading{
@@ -21,16 +31,25 @@
 
     &__thumbnail{
         width: 90vw;
-        height: 40vh; 
+        height: 25vh; 
         border-radius: 5px;
         object-fit:fill;
+
+        @include mobile500{
+            height: 30vh;
+        }
 
         @include tablet{
             width: 50vw;
         }
 
+        @include tablet900{
+            height: 40vh;
+        }
+
         @include desktop {
-            width:45vw;
+            width:30vw;
+            height: 30vh;
             margin-right: 2rem;
         }
     }
@@ -51,11 +70,11 @@
         }
 
         @include tablet {
-            width: 95vw;
+            width: 90vw;
         }
 
         @include desktop {
-            width: 50vw;
+            width: 45vw;
         }
 
     }
@@ -63,13 +82,13 @@
     &__desc {
         height: 15vh;
         @include desktop {
-            height: 22vh;
+            height: 15vh;
         }
     }
 
     &__desktopDisplay{
         display: none;
-        @include desktop {
+        @include tablet {
             display: block;
         }
     }
@@ -91,12 +110,12 @@
             background-color: $brainflixBlue;
             border: none;
             border-radius: 5px;
-            height: 8vh;
+            height: 7vh;
             width: 92vw;
             color: $brainflixWhite;
             font-weight: $fontWeightBold;
             @include tablet {
-                height: 8vh;
+                height: 6vh;
                 width: 23vw;
             }
             @include desktop {
@@ -116,8 +135,8 @@
             }
 
             @include desktop {
-                left: 86%;
-                top: 28%;
+                left: 83%;
+                top: 27%;
             }
         }
 

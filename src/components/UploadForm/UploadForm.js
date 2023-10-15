@@ -1,13 +1,20 @@
 import './UploadForm.scss';
 import videoThumbnail from '../../assets/images/Upload-video-preview.jpg';
 import publishIcon from '../../assets/icons/publish.svg';
+import { useNavigate } from 'react-router-dom';
 
 function UploadForm () {
+    let navigate = useNavigate();
+    const submitHandler = (event) =>{
+        alert(`Your video with title : ${event.target.videoTitle.value} and description: ${event.target.videoDesc.value} has been uploaded. Reverting to homepage.`);
+        navigate("/")
+    }
+    
     return (
         <section className="uploadForm">
-            <hr className="uploadForm__topHR"/>
             <h1 className="uploadForm__heading">Upload Video</h1>
-            <form>
+            <hr className="uploadForm__desktopDisplay"/>
+            <form onSubmit={submitHandler}>
                 <div className="uploadForm__videoDetails">
                     <div>
                         <h4 className="uploadForm__subHeading">VIDEO THUMBNAIL</h4>

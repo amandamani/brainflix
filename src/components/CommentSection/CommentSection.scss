@@ -10,7 +10,7 @@
     &__form{
         display: flex;
         flex-direction: row;
-        padding: 1rem 1rem;
+        padding: 1rem 0rem;
         position: relative;
 
         @include desktop {
@@ -56,16 +56,8 @@
 
         @include tablet {
             height: 4vh;
-            width: 60vw;
+            width: 50vw;
             margin-right: 1rem;
-        }
-
-        @include tablet900 {
-            width: 63vw;
-        }
-
-        @include tablet1200 {
-            width: 66vw;
         }
 
         @include desktop {
@@ -101,12 +93,12 @@
 
         @include tablet {
             height: 4.5vh;
-            width: 22vw;
+            width: 26vw;
             margin-top: 1.25rem;
         }
 
         @include tablet900 {
-            width: 24vw;
+            width: 25vw;
         }
 
         @include desktop {
@@ -123,13 +115,8 @@
 
         @include tablet {
             top: 40%;
-            left: 76.5%;
+            left: 72%;
         }
-
-        @include tablet900 {
-            left: 78%;
-        }
-        
         @include desktop {
             left: 72%;
         }
