@@ -15,6 +15,17 @@
     @include tablet {
         padding: 0rem 0rem;
     }
+
+    &__uploadPage{
+        &-displaybar{
+            display:block;
+            margin: 0rem;
+            padding: 0rem;
+        }
+        &-hidebar{
+            display: none;
+        }
+    }
   
     &__logo {
         width: 20vw;
@@ -23,6 +34,10 @@
         @include tablet {
             width: 20vw;
             padding: 0rem 3rem 0rem 3rem;
+        }
+
+        @include tablet900{
+            padding: 0rem 6rem 0rem 3rem;
         }
 
         @include desktop {

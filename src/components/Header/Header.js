@@ -24,7 +24,7 @@ function Header () {
                     {mediaQuery.matches?<img className="header__userIcon" src={userIcon} alt="mohanMuruge icon"/>:<></>}
                 </div>
             </header>
-            {/* <hr/> */}
+            <hr className={window.location.href.includes('upload')?"header__uploadPage-displaybar":"header__uploadPage-hidebar"}/>
         </div>
     )
 }

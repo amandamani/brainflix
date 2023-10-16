@@ -34,6 +34,10 @@
         @include tablet {
             width: 80vw;
         }
+
+        @include tablet900 {
+            width: 84vw;
+        }
         
         @include desktop {
             width: 46vw;
