@@ -146,3 +146,17 @@
         }
     }
 }
+
+.display-mobile{
+    display: block;
+    @include tablet {
+        display: none;
+    }
+}
+
+.display-tablet{
+    display: none;
+    @include tablet {
+        display: block;
+    }
+}

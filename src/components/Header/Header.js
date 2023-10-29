@@ -6,7 +6,6 @@ import {NavLink} from 'react-router-dom';
 
 
 function Header () {
-    const mediaQuery = window.matchMedia('(min-width: 768px)')
     return(
         <div>
             <header className="header">
@@ -17,11 +16,11 @@ function Header () {
                     <form>
                         <input type="text" placeholder="Search" name="search" className="header__searchBar"/>
                     </form>
-                    {!mediaQuery.matches?<img className="header__userIcon" src={userIcon} alt="mohanMuruge icon"/>:<></>}
+                    <img className="header__userIcon display-mobile" src={userIcon} alt="mohanMuruge icon"/>
                 </div>
                 <div className="header__upload">
                 <NavLink to="/upload"><button className="header__upload-button"><img src={uploadIcon} alt="Upload Logo" className="header__upload-image"/>UPLOAD</button></NavLink>
-                    {mediaQuery.matches?<img className="header__userIcon" src={userIcon} alt="mohanMuruge icon"/>:<></>}
+                    <img className="header__userIcon display-tablet" src={userIcon} alt="mohanMuruge icon"/>
                 </div>
             </header>
             <hr className={window.location.href.includes('upload')?"header__uploadPage-displaybar":"header__uploadPage-hidebar"}/>

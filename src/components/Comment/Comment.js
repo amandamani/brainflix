@@ -8,7 +8,7 @@ function Comment (props) {
         <>
             <div class="new-comment">
                 <div>
-                    <img src={userIcon} alt="No User Icon" class="new-comment__userIcon" />
+                    <img src={userIcon} alt="Default User Icon" class="new-comment__userIcon" />
                 </div>
                 <div>
                     <div class="new-comment__userdetails">

@@ -1,9 +1,7 @@
 import './App.scss';
 import Home from './pages/Home/Home';
 import Upload from './pages/Upload/Upload';
-import axios from 'axios';
-import {useState, useEffect} from 'react';
-import { BrowserRouter, Routes, Route, useParams } from 'react-router-dom';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
 
 function App() {
 

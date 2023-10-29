@@ -5,7 +5,6 @@ import Comment from '../Comment/Comment'
 
 
 function CommentSection (props) {
-    const mediaQuery = window.matchMedia('(min-width: 768px)')
     const comments = props.currentVideo.comments;
     return(
         <section className="comment-section">
@@ -17,10 +16,10 @@ function CommentSection (props) {
                 <div className="comment-section__add">
                     <h5 className="comment-section__heading">JOIN THE CONVERSATION</h5>
                     <textarea id="userComment" name="userComment" placeholder=" Add a new comment" className="comment-section__input"></textarea>
-                    {!mediaQuery.matches?<button type="submit" className="comment-section__button"><img src={commentIcon} alt="commentIcon" className="comment-section__image"/>COMMENT</button>:<></>}
+                    <button type="submit" className="comment-section__button display-mobile"><img src={commentIcon} alt="commentIcon" className="comment-section__image"/>COMMENT</button>
                 </div>
                 <div>
-                {mediaQuery.matches?<button type="submit" className="comment-section__button"><img src={commentIcon} alt="commentIcon" className="comment-section__image"/>COMMENT</button>:<></>}
+                    <button type="submit" className="comment-section__button display-tablet"><img src={commentIcon} alt="commentIcon" className="comment-section__image"/>COMMENT</button>
                 </div>
             </form>
             <div id="comment-section">

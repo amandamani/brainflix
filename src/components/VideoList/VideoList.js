@@ -1,5 +1,4 @@
 import './VideoList.scss'
-import videolist from '../../data/videos.json'
 import Video from '../Video/Video'
 import { NavLink } from 'react-router-dom'
 

@@ -40,3 +40,10 @@ a {
         }
     }
 }
+
+.display-desktop{
+    display: none;
+    @include desktop {
+        display: block;
+    }
+}
