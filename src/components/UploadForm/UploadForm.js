@@ -2,12 +2,19 @@ import './UploadForm.scss';
 import videoThumbnail from '../../assets/images/Upload-video-preview.jpg';
 import publishIcon from '../../assets/icons/publish.svg';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import { v4 as uuidv4 } from 'uuid';
 
 function UploadForm () {
     let navigate = useNavigate();
     const submitHandler = (event) =>{
-        alert(`Your video with title : ${event.target.videoTitle.value} and description: ${event.target.videoDesc.value} has been uploaded. Reverting to homepage.`);
-        navigate("/")
+        event.preventDefault();
+        let videoToAdd = {};
+        videoToAdd.id = uuidv4();
+        videoToAdd.title = event.target.videoTitle.value;
+        videoToAdd.description = event.target.videoDesc.value;
+        axios.post("http://localhost:8080/videos/upload",videoToAdd);
+        navigate("/");
     }
     
     return (
